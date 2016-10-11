@@ -7,7 +7,7 @@
 # Authors: Isaac Bythewood
 # Updated: Dec 14th, 2014
 # Require: Docker (http://www.docker.io/)
-# -----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
 
 
 # Base system is the LTS version of Ubuntu.
