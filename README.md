@@ -14,9 +14,9 @@ For more information on Minecraft and check out it's [website][1].
 Running this will build you a docker image with the latest version of both
 docker-minecraft and Minecraft itself.
 
-    git clone https://github.com/overshard/docker-minecraft
+    git clone https://github.com/cmiller82/docker-minecraft
     cd docker-minecraft
-    sudo docker build -t overshard/minecraft .
+    sudo docker build -t cmiller/minecraft .
 
 
 ## Running docker-minecraft
@@ -30,7 +30,10 @@ same port as well.
 Also be sure your mounted directory on your host machine is
 already created before running `mkdir -p /mnt/minecraft`.
 
-    sudo docker run -d=true -p=25565:25565 -v=/mnt/minecraft:/data overshard/minecraft /start
+    sudo docker run -d=true -p=25565:25565 -v=/mnt/minecraft:/data cmiller/forge /start
+
+For troubleshooting run:
+`sudo docker run -it --entrypoint=/bin/bash -p25565:25565 -v=/home/entuit/minecraft:/data cmiller/forge`
 
 From now on when you start/stop docker-minecraft you should use the container id
 with the following commands. To get your container id, after you initial run
