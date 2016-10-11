@@ -33,7 +33,7 @@ already created before running `mkdir -p /mnt/minecraft`.
     sudo docker run -d=true -p=25565:25565 -v=/mnt/minecraft:/data cmiller/forge /start
 
 For troubleshooting run:
-`sudo docker run -it --entrypoint=/bin/bash -p25565:25565 -v=/home/entuit/minecraft:/data cmiller/forge`
+```sudo docker run -it --entrypoint=/bin/bash -p25565:25565 -v=/home/entuit/minecraft:/data cmiller/forge```
 
 From now on when you start/stop docker-minecraft you should use the container id
 with the following commands. To get your container id, after you initial run
