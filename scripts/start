@@ -7,9 +7,14 @@
 # -----------------------------------------------------------------------------
 
 
-if [ ! -f /data/minecraft_server.jar ]
+if [ ! -f /data/forge-1.10.2-12.18.2.2099-installer.jar ]
 then
-    curl "https://s3.amazonaws.com/Minecraft.Download/versions/1.10.2/minecraft_server.1.10.2.jar" -o /data/minecraft_server.jar
+    #curl "https://s3.amazonaws.com/Minecraft.Download/versions/1.10.2/minecraft_server.1.10.2.jar" -o /data/minecraft_server.jar
+    cp /opt/minecraft/forge-1.10.2-12.18.2.2099-installer.jar /data/forge-1.10.2-12.18.2.2099-installer.jar
+    mkdir /data/jar
+    cp /opt/minecraft/minecraft_server.1.10.2.jar /data/jar/minecraft_server.1.10.2.jar
+    echo "Copied! "
+    cd data; java -jar forge-1.10.2-12.18.2.2099-installer.jar -installServer
 fi
 
 if [ ! -f /data/eula.txt ]
@@ -17,5 +22,5 @@ then
     echo "eula=true" > /data/eula.txt
 fi
 
-cd /data/; java -Xmx2G -jar minecraft_server.jar nogui
+cd /data; java -Xmx2G -jar forge-1.10.2-12.18.2.2099-universal.jar nogui
 
