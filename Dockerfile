@@ -27,6 +27,8 @@ RUN    echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-se
 
 
 # Load in all of our config files.
+ADD    ./forge/forge-1.10.2-12.18.2.2099-installer.jar /opt/minecraft/forge-1.10.2-12.18.2.2099-installer.jar
+ADD    ./forge/minecraft_server.1.10.2.jar /opt/minecraft/minecraft_server.1.10.2.jar
 ADD    ./scripts/start /start
 
 
@@ -42,3 +44,4 @@ VOLUME ["/data"]
 
 # /start runs it.
 CMD    ["/start"]
+
