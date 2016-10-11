@@ -6,6 +6,7 @@ For more information on Minecraft and check out it's [website][1].
 
 # Download
 `wget "http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.10.2-12.18.2.2099/forge-1.10.2-12.18.2.2099-installer.jar"`
+
 `wget "https://s3.amazonaws.com/Minecraft.Download/versions/1.10.2/minecraft_server.1.10.2.jar"`
 
 ## Building docker-minecraft
